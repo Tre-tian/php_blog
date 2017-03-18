@@ -15,8 +15,7 @@ if (!$query->execute()) {
 	print_r($query->errorInfo());
 }else{
 	// rm on linux
-	exec('del ' . $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $resource->file )
-	ChromePhp::log( 'del ' . $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $resource->file );
+	unlink(  $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $resource->file ) ;		
 	set_notice( 'del ok') ;		
 	redirect_to("./");
 

@@ -119,7 +119,8 @@ A	sessions/save.php
 M	users/new.php
 M	users/save.php
 
-V16、17、18 增加调试、文件上传功能
+V16 增加调试
+V17、18 文件上传功能
 
 5eaace3 
 V19 增加分页功能        

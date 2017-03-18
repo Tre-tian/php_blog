@@ -5,7 +5,7 @@
   //ChromePhp::warn('something went wrong!');
 
   // 请务必选中 chrome console 窗口上栏的 preserve log 选项
-  require_once $_SERVER['DOCUMENT_ROOT'] . '/inc/chrome_php.php' ;	
+  require_once $_SERVER['DOCUMENT_ROOT'] . '/inc/ChromePhp.php' ;	
   
   function redirect_to($dest="/"){
     // bug for chrome https://github.com/ccampbell/chromelogger/issues/29
