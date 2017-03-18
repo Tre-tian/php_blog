@@ -11,7 +11,8 @@ echo $query->bindValue(':id',$id,PDO::PARAM_INT);
 
 if (!$query->execute()) {	
 	print_r($query->errorInfo());
-}else{
+}else{	
+	ChromePhp::log($sql);
 	redirect_to("show.php?id={$id}");
 };
 

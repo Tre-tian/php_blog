@@ -1,7 +1,3 @@
-<?php 
-require_once '../inc/db.php';
-
-?>
 <!doctype html>
 <html lang="en">
 <head>

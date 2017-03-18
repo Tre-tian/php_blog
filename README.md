@@ -20,12 +20,9 @@ D	show-2.html
 D	show-3.html
 A	show.php
 
-0b730be
-V3 fixed show.php   
-M	show.php
 
 0e76d4e
-V4 重构edit        
+V3 重构edit        
 D	edit-1.html
 D	edit-2.html
 D	edit-3.html
@@ -34,36 +31,33 @@ M	index.html
 A	update.php
 
 aa227d5
-V5 redirect_to   
+V4 redirect_to   
 M	update.php
 
 40f3493
-V6 引入require机制   
+V5 引入require机制   
 A	inc/common.php
 A	inc/db.php
 M	update.php
-
-2e54a30
-V7 引入require机制   
 M	show.php
 
 b609960 
-V8 重构new与save   
+V6 重构new与save   
 D	new.html
 A	new.php
 A	save.php
 
 e688b9f
-V9 引入array,示例循环嵌入html    
+V7 使用array,示例循环嵌入html    
 D	index.html
 A	index.php
 
 59a1a77
-V10 重构index.php     
+V8 使用数据库，重构index.php     
 M	index.php
 
 92f7f95
-V11 重构del动作     
+V9 重构del动作     
 D	delete-1.html
 D	delete-2.html
 D	delete-3.html
@@ -71,12 +65,12 @@ A	delete.php
 A	destroy.php
 
 3ae56e7 
-V12 增加created_at字段  
+V10 增加created_at字段  
 M	index.php
 M	save.php
 
 5a15c1c
-V13 重构使用pdo		
+V11 重构使用pdo		
 M	destroy.php
 M	edit.php
 M	inc/db.php
@@ -86,41 +80,37 @@ M	show.php
 M	update.php
 
 7fe3dc9
-V14 重构文件layout		
+V12 重构文件layout
+M   index.php
 D	delete.php
 D	destroy.php
 D	edit.php
-M	index.php
 D	new.php
-A	posts/delete.php
-A	posts/destroy.php
-A	posts/edit.php
-A	posts/index.php
-A	posts/new.php
-A	posts/save.php
-A	posts/show.php
-A	posts/update.php
 D	save.php
 D	show.php
 D	update.php
-
-3fe1784 
-V15 重构文件layout 		
-M	index.php
+A   posts/delete.php
+A   posts/destroy.php
+A   posts/edit.php
+A   posts/index.php
+A   posts/new.php
+A   posts/save.php
+A   posts/show.php
+A   posts/update.php
 
 f4b9dca 
-V16 增加评论功能        
+V13 增加评论功能        
 A	comments/save.php
 M	posts/show.php
 
 73605b6 
-V17 增加用户注册功能   
+V14 增加用户注册功能   
 A	users/index.php
 A	users/new.php
 A	users/save.php
 
 316de3b 
-V18 增加会话管理功能    
+V15 增加会话管理功能    
 A	inc/session.php
 M	posts/index.php
 A	sessions/delete.php
@@ -129,7 +119,7 @@ A	sessions/save.php
 M	users/new.php
 M	users/save.php
 
-V18-1-2-3 增加调试、文件上传功能
+V16、17、18 增加调试、文件上传功能
 
 5eaace3 
 V19 增加分页功能        
