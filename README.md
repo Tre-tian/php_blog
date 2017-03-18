@@ -120,7 +120,15 @@ M	users/new.php
 M	users/save.php
 
 V16 增加调试
-V17、18 文件上传功能
+A   inc/ChromePhp.php
+M   inc/common.php
+
+V17 文件上传功能
+A  assets/index.php
+A  assets/new.php
+A  assets/save.php
+A  assets/delete.php
+A  assets/destroy.php
 
 5eaace3 
 V19 增加分页功能        
