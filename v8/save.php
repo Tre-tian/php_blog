@@ -8,7 +8,7 @@ if (!mysql_query($sql)) {
 	echo mysql_error();	
 	echo '<br>' .  $sql;
 }else{
-	redirect_to("/");
+	redirect_to("../");
 };
 
 ?>
