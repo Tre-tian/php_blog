@@ -6,19 +6,19 @@
 </head>
 
 <body>
-<?php 
-	@mysql_connect("localhost","demo") or die("sorry,sql wrong!");
-	@mysql_select_db("phpdemo");
-	
-	$sql = 	"select * from posts where id = 1 " ;
+<?php
+	@mysql_connect("127.0.0.1","root","root") or die("sorry,sql wrong!");
+	@mysql_select_db("wordpress");
+
+	$sql = 	"select * from wp_posts limit 1 " ;
 	$query	=	mysql_query($sql);
 	$row =	mysql_fetch_array($query);
-	$s = $row["body"];
+	$s = $row["post_title"];
 ?>
 
 
 <h1> <?php print $s; ?> </h1>
-	
+
 </body></html>
 
 
