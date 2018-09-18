@@ -13,7 +13,7 @@ $created_at = date('Y-m-d H:i:s');	//CURRENT_TIMESTAMP
 if (!$query->execute()) {	
 	print_r($query->errorInfo());
 }else{
-	redirect_to("../");
+	redirect_to("/");
 };
 
 ?>

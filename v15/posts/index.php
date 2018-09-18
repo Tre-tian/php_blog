@@ -1,9 +1,3 @@
-<?php 
-
-require_once '../inc/session.php';
-require_once '../inc/db.php';
-
-?>
 <!doctype html>
 <html>
 <head>
@@ -12,7 +6,6 @@ require_once '../inc/db.php';
 </head>
 
 <body>
-  <?php if(is_login()) echo '当前用户: ' . current_user()->name ;?>
   <table border=1>
     <caption><h1>帖子列表</h1></caption>
     <thead>
@@ -26,7 +19,7 @@ require_once '../inc/db.php';
     <tbody>
       <?php 
 
-        
+        require_once '../inc/db.php';
         
         $query = $db->query('select * from posts');
         while ( $post =  $query->fetchObject() ) {

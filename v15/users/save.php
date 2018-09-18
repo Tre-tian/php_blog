@@ -1,15 +1,16 @@
 <?php
-require_once '../inc/session.php';
 require_once '../inc/db.php';
 require_once '../inc/common.php';
 
 $name = trim($_POST['name']);
 if($_POST['password'] == $_POST['password2']){
-	if(load_user($name)){		
-		set_notice('用户名已存在！');
-		redirect_back();
+	$query = $db->prepare('select * from users where name = :name');
+	$query->bindParam(':name',$name,PDO::PARAM_STR);		
+	$query->execute();
+	if($query->fetchObject()){		
+		redirect_to('new.php?notice=用户名已存在！');
 	}else{
-		$pwd = encrypt_password($_POST['password']); 
+		$pwd = hash_hmac('sha256', $_POST['password'], 'xxxxxxx234dsf@sdf'); 
 		$created_at = date('Y-m-d H:i:s');	//CURRENT_TIMESTAMP
 
 		$sql = "insert into users(name,password,created_at) values(:name, :password,:created_at);" ;	
@@ -25,8 +26,7 @@ if($_POST['password'] == $_POST['password2']){
 		};
 	}
 }else{
-	set_notice('两次密码不一致');
-	redirect_back();		
+	redirect_to('new.php?notice=两次密码输入不一致！');	
 }
 
 

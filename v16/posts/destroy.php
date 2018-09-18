@@ -9,7 +9,7 @@ $query->bindValue(':id',$_POST['id'],PDO::PARAM_INT);
 if (!$query->execute()) {	
 	print_r($query->errorInfo());
 }else{
-	redirect_to("../");
+	redirect_to("/");
 };
 
 ?>
