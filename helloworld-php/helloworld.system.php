@@ -7,12 +7,18 @@
 
 
 <body>
-<?php 
-   $s = "hellow world! Now is ".  exec("date") ; 
+<?php
+  if(PHP_OS == 'WINNT') {
+    $date = exec("echo %date%_%time%");
+  }else{
+    $date = exec("date");
+  }
+
+  $s = "hellow world! Now is ".  $date ;
 ?>
 
-<h1> <?php print $s; ?> </h1>
-	
+<h1> <?php print $s;  ?> </h1>
+
 </body></html>
 
 
