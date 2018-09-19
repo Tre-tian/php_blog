@@ -2,7 +2,7 @@ CREATE database phpdemo;
 Use phpdemo;
 
 CREATE USER 'demo'@'localhost' IDENTIFIED BY 'demo';
-GRANT ALL PRIVILEGES ON `phpdemo` . * TO 'demo'@'%' WITH GRANT OPTION ;
+GRANT ALL PRIVILEGES ON `phpdemo` . * TO 'demo'@'localhost' WITH GRANT OPTION ;
 
 CREATE TABLE posts (
   id int(11) NOT NULL AUTO_INCREMENT,
@@ -35,8 +35,8 @@ CREATE TABLE users (
   id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(128) NOT NULL,
   password text NOT NULL,
-  created_at datetime NOT NULL,  
-  updated_at datetime NOT NULL,    
+  created_at datetime NOT NULL,
+  updated_at datetime NOT NULL,
   PRIMARY KEY (id)
 ) ;
 

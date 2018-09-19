@@ -37,13 +37,11 @@ A update.php
 V04 redirect_to   
 M update.php
 
-
 V05 引入require机制   
 A inc/common.php
 A inc/db.php
 M update.php
 M show.php
-
 
 V06 重构new与save   
 D new.html
