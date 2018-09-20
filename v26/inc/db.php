@@ -1,8 +1,4 @@
-<?php 
-
-
-//mysql_query("SET NAMES utf8");    
-
+<?php
 
 try{
 	$db = new PDO("mysql:host=127.0.0.1;dbname=phpdemo;","demo","demo");
@@ -11,5 +7,5 @@ try{
 }catch (PDOException $e){
 	echo $e->getMessage() . '<br/>';
 }
-	
+
 ?>

@@ -5,13 +5,13 @@
   <title>show | 博客</title>
 </head>
 <body>
-  <?php        
+  <?php
     require_once './inc/db.php';
-    
+
     $id = $_GET['id'] ;
     $sql = 'select * from posts where id = ' . $id;
-    $query = mysql_query($sql);
-    $post = mysql_fetch_object($query);
+    $query = mysqli_query($db,$sql);
+    $post = mysqli_fetch_object($query);
   ?>
 
   <h1><?php echo $post->id; ?> : <?php echo $post->title; ?>  </h1>

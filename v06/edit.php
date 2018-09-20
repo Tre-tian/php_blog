@@ -5,14 +5,12 @@
   <title>edit | 博客 </title>
 </head>
 <body>
-	<?php 
-	    mysql_connect('localhost','demo','demo') or die('can`t work');
-	    mysql_query("SET NAMES utf8");    
-	    mysql_select_db('phpdemo');
+	<?php
+		require_once './inc/db.php';
 
-		$id = $_GET['id'];	 
-		$query = mysql_query("select * from posts where id = {$id}");
-		$post = mysql_fetch_object($query);
+		$id = $_GET['id'];
+		$query = mysqli_query($db,"select * from posts where id = {$id}");
+		$post = mysqli_fetch_object($query);
 	?>
 	<h1>edit post:</h1>
 

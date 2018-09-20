@@ -1,7 +1,10 @@
 <?php
 
-mysql_connect('localhost','demo','demo') or die('can`t work');
-mysql_query("SET NAMES utf8");
-mysql_select_db('phpdemo');
+$db = mysqli_connect('localhost','demo','demo','phpdemo');
+if (mysqli_connect_errno($db)) {
+  echo "连接 MySQL 失败: " . mysqli_connect_error();
+  exit;
+}
+mysqli_query($db,"SET NAMES utf8");
 
 ?>

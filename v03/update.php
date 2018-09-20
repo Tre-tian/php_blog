@@ -1,13 +1,16 @@
-<?php 
+<?php
 
-mysql_connect('localhost','demo','demo') or die('can`t work');
-mysql_query("SET NAMES utf8");    
-mysql_select_db('phpdemo');
+$db = mysqli_connect('localhost','demo','demo','phpdemo');
+if (mysqli_connect_errno($db)) {
+  echo "连接 MySQL 失败: " . mysqli_connect_error();
+  exit;
+}
+mysqli_query($db,"SET NAMES utf8");
 
 $id = $_POST['id'];
-$sql = "update posts set title = '{$_POST['title']}', body = '{$_POST['body']}' where id = {$_POST['id']};" ;	
-if (!mysql_query($sql)) {
-	echo mysql_error();	
+$sql = "update posts set title = '{$_POST['title']}', body = '{$_POST['body']}' where id = {$_POST['id']};" ;
+if (!mysqli_query($db,$sql)) {
+	echo mysqli_error($db);
 	echo '<br>' .  $sql;
 };
 

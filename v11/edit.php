@@ -5,13 +5,13 @@
   <title>edit | 博客 </title>
 </head>
 <body>
-	<?php 
+	<?php
 		require_once './inc/db.php';
 		$id = $_GET['id'];
-	    $query = $db->prepare('select * from posts where id = :id');
-	    $query->bindValue(':id',$id,PDO::PARAM_INT);
-	    $query->execute();
-	    $post = $query->fetchObject();    		
+    $query = $db->prepare('select * from posts where id = :id');
+    $query->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    $post = $query->fetchObject();
 	?>
 	<h1>edit post:</h1>
 

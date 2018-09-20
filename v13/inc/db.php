@@ -1,7 +1,4 @@
-<?php 
-
-
-//mysql_query("SET NAMES utf8");    
+<?php
 
 
 try{
@@ -11,5 +8,5 @@ try{
 }catch (PDOException $e){
 	echo $e->getMessage() . '<br/>';
 }
-	
+
 ?>
