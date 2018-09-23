@@ -90,14 +90,14 @@ D show.php > posts/show.php
 D update.php > posts/update.php
 A posts/index.php
 
-V13 增加调试
+V13 增加调试，但将此变成保存至后续版本
 A   inc/ChromePhp.php
+A   inc/kint.phar
 M   inc/common.php
 
 V14 增加评论功能        
 A comments/save.php
 M posts/show.php
-
 
 V15 增加用户注册功能   
 A users/index.php
